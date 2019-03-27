@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF0BB63A217A84E800B0556C"
-               BuildableName = "mParticle_ExampleTests.xctest"
-               BlueprintName = "mParticle_ExampleTests"
+               BuildableName = "mParticle_PilgrimTests.xctest"
+               BlueprintName = "mParticle_PilgrimTests"
                ReferencedContainer = "container:mParticle-Pilgrim.xcodeproj">
             </BuildableReference>
          </TestableReference>
