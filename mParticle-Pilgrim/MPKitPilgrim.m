@@ -35,24 +35,24 @@ NS_ASSUME_NONNULL_END
     NSString *consumerKey = [self stringOrNil:configuration[PILGRIM_SDK_KEY]];
     NSString *secretKey = [self stringOrNil:configuration[PILGRIM_SDK_SECRET]];
     BOOL persistLogs = [configuration[PERSIST_LOGS] boolValue];
-
+    
     if (!consumerKey || !secretKey) {
         return [self execStatus:MPKitReturnCodeRequirementsNotMet];
     }
-
+    
     self.pilgrimManager = [FSQPPilgrimManager sharedManager];
-
+    
     if (!self.pilgrimManager) {
         return nil;
     }
-
+    
     [self.pilgrimManager configureWithConsumerKey:consumerKey secret:secretKey delegate:nil completion:nil];
     self.pilgrimManager.debugLogsEnabled = persistLogs;
-
+    
     _configuration = configuration;
-
+    
     [self start];
-
+    
     return [self execStatus:MPKitReturnCodeSuccess];
 }
 
@@ -62,15 +62,15 @@ NS_ASSUME_NONNULL_END
 
 - (void)start {
     static dispatch_once_t kitPredicate;
-
+    
     dispatch_once(&kitPredicate, ^{
         self->_started = YES;
-
+        
         [self.pilgrimManager start];
-
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             NSDictionary *userInfo = @{mParticleKitInstanceKey:[[self class] kitCode]};
-
+            
             [[NSNotificationCenter defaultCenter] postNotificationName:mParticleKitDidBecomeActiveNotification
                                                                 object:nil
                                                               userInfo:userInfo];
@@ -82,11 +82,11 @@ NS_ASSUME_NONNULL_END
     FSQPUserInfo *userInfo = [self.pilgrimManager userInfo];
     NSString *mParticleUserId = [mparticleUser.userId stringValue];
     NSString *customerId = [mparticleUser.userIdentities objectForKey:@(MPUserIdentityCustomerId)];
-
+    
     if (customerId) {
         [userInfo setUserId:customerId];
     }
-
+    
     [userInfo setUserInfo:mParticleUserId forKey:MPARTICLE_USER_ID];
 }
 
