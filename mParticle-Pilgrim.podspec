@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "mParticle-Pilgrim"
-    s.version          = "7.13.0"
+    s.version          = "7.14.0"
     s.summary          = "Pilgrim integration for mParticle"
 
     s.description      = <<-DESC
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
 
     s.ios.deployment_target = "9.0"
     s.ios.source_files      = 'mParticle-Pilgrim/*.{h,m}'
-    s.ios.dependency 'mParticle-Apple-SDK/mParticle', '~> 7.9.0'
+    s.ios.dependency 'mParticle-Apple-SDK/mParticle', '~> 7.0'
     s.ios.dependency 'Pilgrim', '~> 2.1'
 end
