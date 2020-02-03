@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "mParticle-Pilgrim"
-    s.version          = "7.15.0"
+    s.version          = "7.15.1"
     s.summary          = "Pilgrim integration for mParticle"
 
     s.description      = <<-DESC
