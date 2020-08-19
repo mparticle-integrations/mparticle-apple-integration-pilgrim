@@ -1,2 +1,2 @@
-github "mparticle/mparticle-apple-sdk" ~> 7.0
+github "mparticle/mparticle-apple-sdk" ~> 8.0.0-beta
 binary "https://foursquare.jfrog.io/foursquare/pilgrimsdk-ios/Pilgrim.json" ~> 2.1
