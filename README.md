@@ -7,13 +7,13 @@ This repository contains the [Pilgrim](https://enterprise.foursquare.com/product
 1. Add the kit dependency to your app's Podfile or Cartfile:
 
     ```
-    pod 'mParticle-Pilgrim', '~> 7.0'
+    pod 'mParticle-Pilgrim', '~> 8'
     ```
 
     OR
 
     ```
-    github "mparticle-integrations/mparticle-apple-integration-pilgrim" ~> 7.0
+    github "mparticle-integrations/mparticle-apple-integration-pilgrim" ~> 8.0
     ```
 
 2. Follow the mParticle iOS SDK [quick-start](https://github.com/mParticle/mparticle-apple-sdk), then rebuild and launch your app, and verify that you see `"Included kits: { Pilgrim }"` in your Xcode console 
